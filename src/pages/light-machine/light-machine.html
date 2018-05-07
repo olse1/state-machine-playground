@@ -1,0 +1,30 @@
+<!--
+  Generated template for the LightMachinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Light Machine</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="events">
+    <button ion-button *ngFor="let event of events" (click)="transition(event)">{{ event }}</button>
+  </div>
+  <div class="light-machine">
+    <div class="light" [attr.color]="data.lightColor === 'red' ? 'red' : 'grey'"></div>
+    <div class="light" [attr.color]="data.lightColor === 'yellow' ? 'yellow' : 'grey'"></div>
+    <div class="light" [attr.color]="data.lightColor === 'green' ? 'green' : 'grey'"></div>
+  </div>
+  <div class="light-machine">
+    <div class="light" [attr.color]="data.pedLightColor === 'red' ? 'red' : 'grey'"></div>
+    <div class="light" [attr.color]="data.pedLightColor === 'green' ? 'green' : 'grey'"></div>
+  </div>
+  <div class="data-string">{{ processedData.return }}</div>
+</ion-content>

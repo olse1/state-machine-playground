@@ -1,0 +1,28 @@
+page-light-machine {
+    .light-machine {
+        padding: 5px;
+        background-color: black;
+        border: 3px solid darkgreen;
+        display: inline-block;
+    }
+
+    .light {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin: 2px;
+
+        &[color="red"] {
+            background-color: red;
+        }
+        &[color="yellow"] {
+            background-color: yellow;
+        }
+        &[color="green"] {
+            background-color: green;
+        }
+        &[color="grey"] {
+            background-color: grey;
+        }
+    }
+}
